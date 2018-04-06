@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Adventures with Ransomware</title>
+	<title>NETS1038 Presentation 2</title>
 
-	<meta name="description" content="Adventures with Ransomware">
+	<meta name="description" content="Crash Override">
 	<meta name="author" content="Thomas Herr">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+	<link rel="stylesheet" href="css/theme/blood.css" id="theme">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,21 +41,43 @@
 	<!-- Any section element inside of this container is displayed as a slide -->
 	<div class="slides">
 		<section>
-			<h1>Ransomware</h1>
-			<h3>Having fun with digital extortion</h3>
+			<h2>Crash Override</h2>
+			<h4>Awesome reference and threat to electric grid operators</h4>
 			<p>
 				<small>Created by <a href="https://tlherr.com">Thomas Herr</a></small>
 				<br>
-				<small>NETS1037-18W-22342</small>
+				<small>NETS1038 Application Security</small>
 			</p>
 		</section>
 
 		<section>
-			<h2>What is it?</h2>
+			<h2>The Flaw</h2>
 
-			<p>Everyone has heard of this</p>
-			<p>Anyone experienced it?</p>
-			<p>Encrypts data, wont release without payment</p>
+
+			<aside class="notes">
+
+			</aside>
+		</section>
+
+		<section>
+			<h2>How it worked</h2>
+
+
+			<aside class="notes">
+
+			</aside>
+		</section>
+
+		<section>
+			<h2>How big a deal is it?</h2>
+
+			<aside class="notes">
+
+			</aside>
+		</section>
+
+		<section>
+			<h2>Threat Level</h2>
 
 			<aside class="notes">
 
@@ -64,311 +86,72 @@
 
 
 		<section>
-			<h2>Brief History</h2>
-
-			<p>First known <i>"malware extortion"</i> attack 1989</p>
-			<p>Asymmetric Encryption usage in attacks in 1996</p>
-
-			<h4>Notable Examples</h4>
-			<table>
-				<thead>
-				<tr>
-					<th>Date</th>
-					<th>Name</th>
-					<th>Type</th>
-					<th>Targets</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>2006</td>
-					<td>Gpcode</td>
-					<td>Trojan</td>
-					<td>Windows</td>
-				</tr>
-				<tr>
-					<td>2010</td>
-					<td>Winlock</td>
-					<td>Trojan</td>
-					<td>Windows</td>
-				</tr>
-				<tr>
-					<td>2013</td>
-					<td>Cryptolocker</td>
-					<td>Trojan</td>
-					<td>Windows</td>
-				</tr>
-				<tr>
-					<td>2017</td>
-					<td>Badrabbit</td>
-					<td>Trojan</td>
-					<td>Windows</td>
-				</tr>
-				</tbody>
-			</table>
-
+			<h2>Defend Against It</h2>
 
 			<aside class="notes">
 
 			</aside>
 		</section>
 
-
-
-
 		<section>
-			<h2>Our Focus</h2>
-
-			<p>NSA Exploit: Eternal Blue</p>
-			<p>Released by Shadow Brokers</p>
-			<p>WannaCryptor aka WannaCry and variants</p>
+			<h2>Who was compromised</h2>
 
 			<aside class="notes">
 
 			</aside>
 		</section>
 
-
 		<section>
-			<h2>How does it work?</h2>
-			<ul>
+			<h2>Who was responsible</h2>
 
-			</ul>
-		</section>
+			<aside class="notes">
 
-		<section>
-			<h2>How does it spread?</h2>
-			<ul>
-				<li>SMB - TCP Port 445</li>
-				<li>Only requires one infected machine</li>
-				<li>Return of the worm</li>
-			</ul>
+			</aside>
 		</section>
 
 		<section>
-			<h2>Lets install it!</h2>
-			<ul>
+			<h2>Long Term Effects</h2>
 
-			</ul>
-		</section>
+			<aside class="notes">
 
-		<section data-background="https://media.giphy.com/media/LRVnPYqM8DLag/giphy.gif">
-			<h3>
-				<span class="fragment highlight highlight-red fade-up">What</span>
-				<span class="fragment highlight highlight-red fade-up">could</span>
-				<span class="fragment highlight highlight-red fade-up">possibly</span>
-				<span class="fragment highlight highlight-red fade-up">go</span>
-				<span class="fragment highlight highlight-red fade-up">wrong</span>
-			</h3>
-		</section>
-
-
-		<!-- Example of nested vertical slides -->
-		<section>
-			<section>
-				<h2>Setup</h2>
-				<p>Protect against propagation</p>
-				<p>Have Backups</p>
-				<p>Accept risk of damaged drive</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Precautions</h2>
-				<ul>
-					<li>EXSI</li>
-					<li>Snapshots</li>
-					<li>New Hard Drive</li>
-					<li>Complete Network Disconnect</li>
-				</ul>
-			</section>
-			<section data-markdown>
-				<h2>Malware Samples:</h2>
-				<br>
-				<p>https://github.com/ytisf/theZoo/tree/master/malwares/Binaries</p>
-
-				<ul>
-					<li>Ransomware.Cerber</li>
-					<li>Ransomware.Cryptowall</li>
-					<li>Ransomware.Jigsaw</li>
-					<li>Ransomware.Locky</li>
-					<li>Ransomware.Mamba</li>
-					<li>Ransomware.Matsnu</li>
-					<li>Ransomware.Petrwrap</li>
-					<li>Ransomware.Petya</li>
-					<li>Ransomware.Radamant</li>
-					<li>Ransomware.Rex</li>
-					<li>Ransomware.Satana </li>
-					<li>Ransomware.TeslaCrypt</li>
-					<li>Ransomware.Vipasana</li>
-					<li>Ransomware.WannaCry</li>
-					<li>Ransomware.WannaCry_Plus</li>
-				</ul>
-
-			</section>
-
-			<section>
-				<h2>Testing Hosts</h2>
-				<ul>
-					<li>Windows XP</li>
-					<li>Windows Vista</li>
-					<li>Windows 7</li>
-					<li>Windows 8</li>
-					<li>Linux</li>
-				</ul>
-				<br>
-
-			</section>
-
-
-			<section>
-				<h2>Testing System</h2>
-				<ul>
-					<li>Ryzen 5 1600X</li>
-					<li>32 GB Ram</li>
-					<li>1 TB WD Blue HDD</li>
-				</ul>
-				<br>
-
-				<a href="#/5">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
+			</aside>
 		</section>
 
 		<section>
-			<h2>Expectations</h2>
+			<h2>Can we catch those involved?</h2>
 
+			<aside class="notes">
+
+			</aside>
 		</section>
 
 		<section>
-			<h2>Attack Vectors</h2>
-
-		</section>
-
-		<section>
-			<h2>Attack Setup</h2>
-
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 1</h2>
-				<p>Variant: WannaCry</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 2</h2>
-				<p>Variant: Cryptowall</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 3</h2>
-				<p>Variant: Linux.Encoder.1</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h2>Attack 4</h2>
-				<p>Variant: Petya</p>
-				<br>
-				<a href="#" class="navigate-down">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-				</a>
-			</section>
-			<section>
-				<h2>Result</h2>
-
-			</section>
-			<section>
-				<h2>Evidence</h2>
-
-				<br>
-
-				<a href="#/2">
-					<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-				</a>
-			</section>
-		</section>
-
-
-		<section>
-			<h1>Mitigation</h1>
-
-		</section>
-
-		<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-			<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
 				<h2>References</h2>
-				<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-			</div>
+
+				<ol>
+					<li>
+						<a href="https://dragos.com/blog/crashoverride/CrashOverride-01.pdf">
+							Lee, R. (<time datetime="2017">2017</time>). <cite>CRASHOVERRIDE: Analysis of the threat to electric grid operations.</cite> Dragos Inc., March.
+						</a>
+					</li>
+					<li>
+						<a href="http://go.galegroup.com/ps/i.do?id=GALE%7CA511368399&sid=googleScholar&v=2.1&it=r&linkaccess=fulltext&issn=00355593&p=AONE&sw=w">
+							Tuttle, H. (<time datetime="2017">2017</time>). <cite>GRID: LOCKED: Managing the Risks of Hacking the Electric Grid.</cite> Risk Management, 64(9), 20-24.
+						</a>
+					</li>
+					<li>
+						<a href="http://ieeexplore.ieee.org/abstract/document/8030362/">
+							Bindra, A. (<time datetime="2017">2017</time>). <cite>Securing the Power Grid: Protecting Smart Grids and Connected Power Systems from Cyberattacks.</cite> IEEE Power Electronics Magazine, 4(3), 20-27.
+						</a>
+					</li>
+				</ol>
+
 		</section>
 
 		<section style="text-align: left;">
 			<h1>THE END</h1>
 			<h3>Questions?</h3>
 
-			<p>
-				<a href="https://github.com/hakimel/reveal.js#pdf-export">export PDF</a>
-			</p>
 		</section>
 
 	</div>
@@ -387,7 +170,7 @@
         history: true,
         center: true,
 
-        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
