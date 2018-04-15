@@ -42,7 +42,8 @@
 	<div class="slides">
 		<section>
 			<h2>Crash Override</h2>
-			<h4>Awesome reference and threat to electric grid operators</h4>
+			<h4>Electric Transmission Grid Malware Analysis</h4>
+
 			<p>
 				<small>Created by <a href="https://tlherr.com">Thomas Herr</a></small>
 				<br>
@@ -53,6 +54,14 @@
 		<section>
 			<h2>The Flaw</h2>
 
+			<p>Abuses IEC101,IEC104, and IEC61850 <span class="citation">(US-CERT, n.d)</span></p>
+
+			<ul>
+				<li>101: Transmission Protocol (Automated Control of electrical systems)</li>
+				<li>104: Defines Network Access for 101</li>
+				<li>61850: Communication protocols for "intelligent" electronic devices</li>
+			</ul>
+
 
 			<aside class="notes">
 
@@ -62,6 +71,27 @@
 		<section>
 			<h2>How it worked</h2>
 
+			<ul>
+				<li>Can issue commands to RTU (Remote Terminal Units) over ICS protocol <span class="citation">(US-CERT, n.d)</span></li>
+				<li>Environment Mapping to aid in target selection and payload delivery <span class="citation">(Lee, 2017)</span></li>
+				<li>Local DoS serial COM Ports <span class="citation">(US-CERT, n.d)</span></li>
+				<li>DoS Siemens Relay</li>
+				<li>Remote Wipe Windows Systems</li>
+			</ul>
+
+
+			<aside class="notes">
+
+			</aside>
+		</section>
+
+
+		<section>
+			<h4>How it worked contd.</h4>
+
+			<img src="assets/program_execution_flow.png">
+			<br>
+			<small>(Lee, 2017)</small>
 
 			<aside class="notes">
 
@@ -71,22 +101,69 @@
 		<section>
 			<h2>How big a deal is it?</h2>
 
+			<h4>Economically</h4>
+			<blockquote>
+				"economic damage of power outages and quality disturbances are estimated to cost the American economy between $25 and $180 billion per annum, although the indirect costs could be up to five times higher."
+
+				<footer>— <cite>
+					<a href="https://www.sciencedaily.com/releases/2014/11/141103114045.htm">(Taylor & Francis, 2014)</a>
+				</cite>
+				</footer>
+			</blockquote>
+
 			<aside class="notes">
 
 			</aside>
+		</section>
+
+
+		<section>
+			<h2>How big a deal is it?</h2>
+
+			<h4>Societal</h4>
+			<ul>
+				<li>Food poisioning, shortages</li>
+				<li>Crime increase</li>
+				<li>Transportation System Failure</li>
+				<li>Communications Infrastructure</li>
+				<li>Medical Infrastructure</li>
+				<li>etc.</li>
+			</ul>
+			<p><span class="citation">(Taylor & Francis, 2014)</span></p>
+
+			<aside class="notes">
+
+			</aside>
+		</section>
+
+		<section data-background-image="https://media.giphy.com/media/tJQzcpmchYvo4/giphy.gif">
+
 		</section>
 
 		<section>
 			<h2>Threat Level</h2>
 
-			<aside class="notes">
-
-			</aside>
+			<h4>Extremely High</h4>
+			<p>Entire society moving towards increased reliance on electrical infrastructure</p>
+			<p>Attractive cyberwarfare/hacktivist target</p>
 		</section>
 
 
 		<section>
 			<h2>Defend Against It</h2>
+
+			<p>No easy fix...</p>
+			<p>FUD is real</p>
+			<blockquote>
+				Application Whitelisting
+				Proper Configuration/Patch Management
+				Reduce Attack Surface
+				Build Defendable Environment
+				Manage Authentication
+				Secure Remote Access
+				Monitor and Respond
+			</blockquote>
+			<small>https://ics-cert.us-cert.gov/sites/default/files/documents/Seven%20Steps%20to%20Effectively%20Defend%20Industrial%20Control%20Systems_S508C.pdf</small>
 
 			<aside class="notes">
 
@@ -96,6 +173,10 @@
 		<section>
 			<h2>Who was compromised</h2>
 
+			<p>That we know of...</p>
+			<p>Single transmission level substation
+				in Ukraine on December 17th, 2016 <span class="citation">(Lee, 2017)</span></p>
+			<p>PoC?</p>
 			<aside class="notes">
 
 			</aside>
@@ -104,13 +185,26 @@
 		<section>
 			<h2>Who was responsible</h2>
 
+			<blockquote>
+				"hackers who are widely believed—but not proven—to be Russian"
+			</blockquote>
+			<small><span class="citation">(Greenberg, 2017)</span></small>
+
 			<aside class="notes">
 
 			</aside>
 		</section>
 
+		<section data-background-image="https://media.giphy.com/media/l0Fec15acV66cSTQY/giphy.gif">
+
+		</section>
+
 		<section>
 			<h2>Long Term Effects</h2>
+
+			<p>Changing cyberwarfare landscape</p>
+			<p>Cybersecurity Defense Spending</p>
+
 
 			<aside class="notes">
 
@@ -120,6 +214,10 @@
 		<section>
 			<h2>Can we catch those involved?</h2>
 
+			<p>Extradition usually a no go</p>
+			<p>Plausible Deniability is easy</p>
+			<p>State actors making use of non government entities to provide insurance</p>
+
 			<aside class="notes">
 
 			</aside>
@@ -128,10 +226,25 @@
 		<section>
 				<h2>References</h2>
 
-				<ol>
+				<ol class="text-sm">
+					<li>
+						<a href="http://ieeexplore.ieee.org/abstract/document/8030362/">
+							Bindra, A. (<time datetime="2017">2017</time>). <cite>Securing the Power Grid: Protecting Smart Grids and Connected Power Systems from Cyberattacks.</cite> IEEE Power Electronics Magazine, 4(3), 20-27.
+						</a>
+					</li>
+					<li>
+						<a href="https://www.wired.com/story/crash-override-malware/">
+							Greenberg, A. (2017, June 13). 'Crash Override': The Malware That Took Down a Power Grid. Retrieved April 15, 2018, from https://www.wired.com/story/crash-override-malware/
+						</a>
+					</li>
 					<li>
 						<a href="https://dragos.com/blog/crashoverride/CrashOverride-01.pdf">
 							Lee, R. (<time datetime="2017">2017</time>). <cite>CRASHOVERRIDE: Analysis of the threat to electric grid operations.</cite> Dragos Inc., March.
+						</a>
+					</li>
+					<li>
+						<a href="https://www.sciencedaily.com/releases/2014/11/141103114045.htm">
+							Taylor & Francis. (2014, November 3). A future of power outages: What happens when the lights go out?. ScienceDaily. Retrieved April 13, 2018 from www.sciencedaily.com/releases/2014/11/141103114045.htm
 						</a>
 					</li>
 					<li>
@@ -140,8 +253,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://ieeexplore.ieee.org/abstract/document/8030362/">
-							Bindra, A. (<time datetime="2017">2017</time>). <cite>Securing the Power Grid: Protecting Smart Grids and Connected Power Systems from Cyberattacks.</cite> IEEE Power Electronics Magazine, 4(3), 20-27.
+						<a href="https://www.us-cert.gov/ncas/alerts/TA17-163A">
+							US-CERT <cite>Alert (TA17-163A)</cite>. (n.d.). Retrieved April 15, 2018, from https://www.us-cert.gov/ncas/alerts/TA17-163A
 						</a>
 					</li>
 				</ol>
